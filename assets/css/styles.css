@@ -758,6 +758,8 @@ a.icon-chip:hover { border-color: var(--c-primary); background: var(--c-primary-
 .footer-col a:hover { color: #fff; }
 .footer-contact li { display: flex; gap: 10px; font-size: var(--fs-sm); padding: 6px 0; color: #B9BED4; }
 .footer-contact svg { width: 18px; height: 18px; color: var(--c-primary); flex: none; margin-top: 2px; }
+.footer-map { margin-top: var(--sp-4); max-width: 300px; border-radius: var(--r-md); overflow: hidden; border: 1px solid rgba(255,255,255,.14); }
+.footer-map iframe { display: block; width: 100%; height: 150px; border: 0; }
 .footer-social { display: flex; gap: var(--sp-2); margin-top: var(--sp-4); }
 .footer-social a { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
   background: rgba(255,255,255,.06); color: #fff; transition: background var(--dur) var(--ease); }
