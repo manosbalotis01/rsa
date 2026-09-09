@@ -70,10 +70,18 @@
           <h2 id="w3" tabindex="-1" style="margin-top:8px">When suits you?</h2>
           <p>Pick a preferred day and time — we’ll confirm exact availability.</p>
           <div class="grid grid--2 mt-6" style="gap:0 24px">
-            <div class="field"><label for="t-day">Preferred day <span class="req">*</span></label><select class="select" id="t-day" required><option value="">Choose a day…</option><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></div>
-            <div class="field"><label for="t-time">Preferred time <span class="req">*</span></label><select class="select" id="t-time" required><option value="">Choose a time…</option><option>Afternoon (15:00–17:00)</option><option>Late afternoon (17:00–19:00)</option><option>Evening (19:00–21:00)</option><option>Saturday morning</option></select></div>
+            <div class="field"><label for="t-day">Preferred day <span class="req">*</span></label><select class="select" id="t-day" required>
+              <option value="">Choose a day…</option>
+              <option value="weekday">Monday</option>
+              <option value="weekday">Tuesday</option>
+              <option value="weekday">Wednesday</option>
+              <option value="weekday">Thursday</option>
+              <option value="weekday">Friday</option>
+              <option value="sat">Saturday</option>
+            </select></div>
+            <div class="field"><label for="t-time">Preferred time <span class="req">*</span></label><select class="select" id="t-time" required data-time-slots><option value="">Διαλέξτε πρώτα μέρα…</option></select></div>
           </div>
-          <div class="field"><label for="t-loc">Location</label><select class="select" id="t-loc"><option>RSA — Ηράκλειο (Εθνομαρτύρων 22)</option><option>Nearest partner centre</option></select></div>
+          <div class="field"><label>Location</label><div class="icon-chip" style="padding:14px 16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>RSA — Ηράκλειο (Εθνομαρτύρων 22)</span></div></div>
           <div class="wizard__nav"><button class="btn btn--ghost" data-prev-step><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Back</button><button class="btn btn--primary" data-next-step>Continue <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button></div>
         </section>
 

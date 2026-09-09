@@ -257,6 +257,17 @@ var ICONS = {
     });
     $$(".field input, .field select", wizard).forEach((f) =>
       f.addEventListener("input", () => f.closest(".field")?.classList.remove("has-error")));
+    // Time slots depend on the selected day (weekday vs Saturday)
+    const dayEl = $("#t-day", wizard), timeEl = $("#t-time", wizard);
+    const SLOTS = { weekday: ["17:30–19:00", "19:15–20:45"], sat: ["09:30–11:00", "11:15–12:45"] };
+    if (dayEl && timeEl) {
+      dayEl.addEventListener("change", () => {
+        const slots = SLOTS[dayEl.value];
+        timeEl.innerHTML = slots
+          ? `<option value="">Επιλέξτε ώρα…</option>` + slots.map((s) => `<option value="${s}">${s}</option>`).join("")
+          : `<option value="">Διαλέξτε πρώτα μέρα…</option>`;
+      });
+    }
     show(0);
   }
 
