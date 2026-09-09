@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — RSA</title>
+  <meta name="description" content="Get in touch with Robotic & Science Academy. Book a free trial, ask a question, or visit us in Ηράκλειο." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="has-mobile-bar">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="RSA — Robotic & Science Academy home"><img class="brand__logo" src="assets/img/rsa-logo.png" alt="RSA — Robotic & Science Academy" width="87" height="44" /></a>
+      <nav class="primary-nav" aria-label="Primary"><ul class="nav__list"><li><a class="nav__link" href="programs.html">Programs</a></li><li><a class="nav__link" href="academy.html">The Academy</a></li><li><a class="nav__link" href="schools.html">For Schools</a></li><li><a class="nav__link" href="index.html#news">News</a></li><li><a class="nav__link" href="contact.html" aria-current="page">Contact</a></li></ul></nav>
+      <div class="header-actions"><a class="utility-link" href="#hub">RSA HUB</a><a class="utility-link" href="#payments">Payments</a><span class="utility-sep" aria-hidden="true"></span><a class="btn btn--primary btn--sm" href="free-trial.html">Free Trial</a><button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav" hidden><div class="mobile-nav__scrim"></div><div class="mobile-nav__panel" role="dialog" aria-modal="true" aria-label="Menu"><div class="mobile-nav__head"><a class="brand" href="index.html" aria-label="RSA — Robotic & Science Academy home"><img class="brand__logo" src="assets/img/rsa-logo.png" alt="RSA — Robotic & Science Academy" width="87" height="44" /></a><button class="btn--icon mobile-nav__close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div><div class="mobile-nav__body"><a class="m-nav-link" href="programs.html">Programs</a><a class="m-nav-link" href="academy.html">The Academy</a><a class="m-nav-link" href="schools.html">For Schools</a><a class="m-nav-link" href="index.html#news">News</a><a class="m-nav-link" href="contact.html">Contact</a></div><div class="mobile-nav__foot"><a class="btn btn--primary btn--block btn--lg" href="free-trial.html">Book a Free Trial</a></div></div></div>
+
+  <main id="main">
+    <div class="container"><nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li class="sep" aria-hidden="true">/</li><li aria-current="page">Contact</li></ol></nav></div>
+    <section class="page-hero"><div class="container page-hero__inner"><span class="eyebrow">Contact</span><h1>We’d love to hear from you</h1><p>Booking a free trial? Choose that below — it’s the fastest way in. For anything else, send us a message.</p></div></section>
+
+    <section class="section"><div class="container split"><div>
+      <div class="section-head"><h2 style="font-size:var(--fs-h3)">Send a message</h2></div>
+      <form class="summary-card" novalidate onsubmit="event.preventDefault(); this.querySelector('.form-success').hidden=false; this.querySelector('.form-body').hidden=true;">
+        <div class="form-body">
+          <div class="field"><label for="c-name">Name <span class="req">*</span></label><input class="input" id="c-name" required /><span class="error-msg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Please enter your name</span></div>
+          <div class="grid grid--2" style="gap:0 24px"><div class="field"><label for="c-email">Email <span class="req">*</span></label><input class="input" id="c-email" type="email" required /><span class="error-msg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Please enter a valid email</span></div><div class="field"><label for="c-phone">Phone</label><input class="input" id="c-phone" type="tel" /></div></div>
+          <div class="field"><label for="c-topic">Topic</label><select class="select" id="c-topic"><option>General question</option><option>Free trial</option><option>Programs &amp; pricing</option><option>Schools</option><option>RSA HUB / Payments</option></select></div>
+          <div class="field"><label for="c-msg">Message <span class="req">*</span></label><textarea class="textarea" id="c-msg" required></textarea><span class="error-msg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Please add a short message</span></div>
+          <label class="checkbox"><input type="checkbox" required /> <span>I agree to RSA’s privacy policy.</span></label>
+          <button class="btn btn--primary btn--lg btn--block mt-4" type="submit">Send message</button>
+        </div>
+        <div class="form-success" hidden><div class="form-success__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><h2>Message sent</h2><p class="lead">Thanks for reaching out — we’ll reply within one working day.</p></div>
+      </form>
+    </div>
+    <div>
+      <div class="section-head"><h2 style="font-size:var(--fs-h3)">Visit or call</h2></div>
+      <div class="stack-lg">
+        <div class="icon-chip" style="padding:20px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Εθνομαρτύρων 22, Ηράκλειο Κρήτης</span></div>
+        <a class="icon-chip" style="padding:20px" href="tel:+302810360544"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg><span>+30 2810 360544 · 6940 411020</span></a>
+        <a class="icon-chip" style="padding:20px" href="mailto:rsa.edu.gr@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg><span>rsa.edu.gr@gmail.com</span></a>
+        <div class="map-embed"><iframe title="Χάρτης — Robotic &amp; Science Academy, Εθνομαρτύρων 22, Ηράκλειο" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d402.7348768681144!2d25.136460291438095!3d35.317104758252526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x149a599eaf6a123f%3A0xd1d38ad0a211afb0!2sRobotic%20and%20Science%20Academy!5e0!3m2!1sel!2sgr!4v1788986065869!5m2!1sel!2sgr" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      </div>
+    </div></div></section>
+
+    <section class="section section--surface"><div class="container" style="max-width:820px"><div class="section-head"><span class="eyebrow">FAQ</span><h2>Quick answers</h2></div>
+      <div class="accordion">
+        <div class="accordion__item"><h3 style="margin:0"><button class="accordion__btn" aria-expanded="false" aria-controls="cf1">How do I book a free trial?<span class="accordion__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button></h3><div class="accordion__panel" id="cf1" role="region"><div class="accordion__panel-inner">Use the <a href="free-trial.html">Free Trial</a> flow — pick your child’s age, a time that suits you, and leave your details. It takes about a minute.</div></div></div>
+        <div class="accordion__item"><h3 style="margin:0"><button class="accordion__btn" aria-expanded="false" aria-controls="cf2">Where do classes take place?<span class="accordion__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button></h3><div class="accordion__panel" id="cf2" role="region"><div class="accordion__panel-inner">At our centre in Ηράκλειο and partner locations. School programs run on-site at your school.</div></div></div>
+        <div class="accordion__item"><h3 style="margin:0"><button class="accordion__btn" aria-expanded="false" aria-controls="cf3">What is RSA HUB?<span class="accordion__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button></h3><div class="accordion__panel" id="cf3" role="region"><div class="accordion__panel-inner">RSA HUB is the portal for enrolled students and parents — progress, materials and payments. You’ll get access once your child joins.</div></div></div>
+      </div>
+    </div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><a class="brand" href="index.html" aria-label="RSA — Robotic & Science Academy home"><img class="brand__logo" src="assets/img/rsa-logo.png" alt="RSA — Robotic & Science Academy" width="87" height="44" /></a><p>Robotic &amp; Science Academy — where children learn technology by building real things.</p></div><nav class="footer-col" aria-label="Programs"><h4>Programs</h4><a href="program.html">Junior Robotics</a><a href="program.html">Kids Robotics</a><a href="program.html">Teens Robotics</a><a href="program.html">Robotics &amp; Python</a><a href="program.html">Arduino &amp; C++</a><a href="program.html">AI Academy</a><a href="program.html">Drone Academy</a><a href="program.html">Digital Skills &amp; Certification</a></nav><nav class="footer-col" aria-label="Academy"><h4>Academy</h4><a href="academy.html">About</a><a href="academy.html#team">Team</a><a href="academy.html#facilities">Facilities</a><a href="contact.html">FAQ</a></nav><nav class="footer-col" aria-label="Schools"><h4>Schools</h4><a href="schools.html">School Visits</a><a href="schools.html">Workshops</a><a href="schools.html">Collaborations</a></nav><div class="footer-col"><h4>Contact</h4><ul class="footer-contact"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Ηράκλειο Κρήτης</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg> rsa.edu.gr@gmail.com</li></ul></div></div><div class="footer-bottom"><p>© 2026 Robotic &amp; Science Academy. All rights reserved.</p><nav class="footer-legal" aria-label="Legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></nav></div></div></footer>
+  <div class="mobile-cta-bar"><a class="btn btn--secondary" href="tel:+302810360544">Call</a><a class="btn btn--primary" href="free-trial.html">Book a Free Trial</a></div>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Free Trial — RSA</title>
+  <meta name="description" content="Book a free trial lesson at RSA in four quick steps. No cost, no commitment." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="RSA — Robotic & Science Academy home"><img class="brand__logo" src="assets/img/rsa-logo.png" alt="RSA — Robotic & Science Academy" width="87" height="44" /></a>
+      <div class="header-actions" style="margin-left:auto">
+        <a class="utility-link" href="contact.html">Need help?</a>
+        <a class="btn btn--secondary btn--sm" href="index.html">Exit</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="section-head section-head--center"><span class="eyebrow" style="justify-content:center">Free trial</span><h1>Book your child’s free lesson</h1><p>Four quick steps — about a minute. No cost, no commitment.</p></div>
+
+      <div class="wizard" id="trialWizard">
+        <div class="wizard__progress">
+          <div class="wizard__bar"><span style="width:0%"></span></div>
+          <ol class="wizard__steps">
+            <li class="is-active"><span class="n">1</span><span class="lbl">Age</span></li>
+            <li><span class="n">2</span><span class="lbl">Program</span></li>
+            <li><span class="n">3</span><span class="lbl">Time</span></li>
+            <li><span class="n">4</span><span class="lbl">Details</span></li>
+          </ol>
+        </div>
+
+        <!-- STEP 1 -->
+        <section class="wizard__panel wizard__step" aria-labelledby="w1">
+          <span class="wizard__count">Step 1 / 4</span>
+          <h2 id="w1" tabindex="-1" style="margin-top:8px">How old is your child?</h2>
+          <p>We’ll recommend the right program automatically.</p>
+          <div class="choice-grid grid grid--2 mt-6" style="gap:12px">
+            <label class="choice is-selected" data-age-choice><input type="radio" name="age" value="5-6" checked /><span><strong>5–6 years</strong><span>Junior Robotics · Προνήπιο–Νήπιο</span></span></label>
+            <label class="choice" data-age-choice><input type="radio" name="age" value="6-8" /><span><strong>6–8 years</strong><span>Kids Robotics · 1st–2nd</span></span></label>
+            <label class="choice" data-age-choice><input type="radio" name="age" value="8-10" /><span><strong>8–10 years</strong><span>Kids Robotics · 3rd–4th</span></span></label>
+            <label class="choice" data-age-choice><input type="radio" name="age" value="10-13" /><span><strong>10–13 years</strong><span>Teens Robotics</span></span></label>
+            <label class="choice" data-age-choice><input type="radio" name="age" value="14-18" /><span><strong>14–18 years</strong><span>Teens Robotics · Γυμνάσιο · Λύκειο</span></span></label>
+          </div>
+          <div class="wizard__nav"><span></span><button class="btn btn--primary" data-next-step>Continue <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button></div>
+        </section>
+
+        <!-- STEP 2 -->
+        <section class="wizard__panel wizard__step" aria-labelledby="w2" hidden>
+          <span class="wizard__count">Step 2 / 4</span>
+          <h2 id="w2" tabindex="-1" style="margin-top:8px">Your recommended program</h2>
+          <p>Based on your child’s age. You can change this later.</p>
+          <div class="finder-card mt-6" style="grid-template-columns:160px 1fr">
+            <div class="media media--ink" aria-hidden="true"><div class="media__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4M9 4h6"/><circle cx="9" cy="14" r="1.3"/><circle cx="15" cy="14" r="1.3"/></svg></div></div>
+            <div class="finder-card__body" style="padding:24px 24px 24px 0"><span class="tag tag--level">Recommended</span><h3 id="recProgram" style="margin-top:8px">Junior Robotics</h3><p>A hands-on introduction — your child builds and programs a small project in the very first lesson.</p></div>
+          </div>
+          <div class="wizard__nav"><button class="btn btn--ghost" data-prev-step><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Back</button><button class="btn btn--primary" data-next-step>Looks good <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button></div>
+        </section>
+
+        <!-- STEP 3 -->
+        <section class="wizard__panel wizard__step" aria-labelledby="w3" hidden>
+          <span class="wizard__count">Step 3 / 4</span>
+          <h2 id="w3" tabindex="-1" style="margin-top:8px">When suits you?</h2>
+          <p>Pick a preferred day and time — we’ll confirm exact availability.</p>
+          <div class="grid grid--2 mt-6" style="gap:0 24px">
+            <div class="field"><label for="t-day">Preferred day <span class="req">*</span></label><select class="select" id="t-day" required><option value="">Choose a day…</option><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></div>
+            <div class="field"><label for="t-time">Preferred time <span class="req">*</span></label><select class="select" id="t-time" required><option value="">Choose a time…</option><option>Afternoon (15:00–17:00)</option><option>Late afternoon (17:00–19:00)</option><option>Evening (19:00–21:00)</option><option>Saturday morning</option></select></div>
+          </div>
+          <div class="field"><label for="t-loc">Location</label><select class="select" id="t-loc"><option>RSA — Ηράκλειο (Εθνομαρτύρων 22)</option><option>Nearest partner centre</option></select></div>
+          <div class="wizard__nav"><button class="btn btn--ghost" data-prev-step><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Back</button><button class="btn btn--primary" data-next-step>Continue <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button></div>
+        </section>
+
+        <!-- STEP 4 -->
+        <section class="wizard__panel wizard__step" aria-labelledby="w4" hidden>
+          <span class="wizard__count">Step 4 / 4</span>
+          <h2 id="w4" tabindex="-1" style="margin-top:8px">Your details</h2>
+          <p>Just so we can confirm your child’s spot.</p>
+          <div class="mt-6">
+            <div class="field"><label for="p-name">Parent / guardian name <span class="req">*</span></label><input class="input" id="p-name" required /><span class="error-msg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Please enter your name</span></div>
+            <div class="grid grid--2" style="gap:0 24px"><div class="field"><label for="p-email">Email <span class="req">*</span></label><input class="input" id="p-email" type="email" required /><span class="error-msg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Please enter a valid email</span></div><div class="field"><label for="p-phone">Phone <span class="req">*</span></label><input class="input" id="p-phone" type="tel" required /><span class="error-msg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Please enter a phone number</span></div></div>
+            <label class="checkbox"><input type="checkbox" required /> <span>I agree to be contacted by RSA to confirm this free trial.</span></label>
+          </div>
+          <div class="wizard__nav"><button class="btn btn--ghost" data-prev-step><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Back</button><button class="btn btn--primary" data-next-step>Confirm free trial</button></div>
+        </section>
+
+        <!-- CONFIRMATION -->
+        <section class="wizard__panel wizard__step" aria-labelledby="w5" hidden>
+          <div class="form-success" style="padding:24px 0">
+            <div class="form-success__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h2 id="w5" tabindex="-1">You’re all set!</h2>
+            <p class="lead">We’ve received your request for a free trial. Our team will call or email within one working day to confirm the exact date and time.</p>
+            <div class="icon-chip" style="justify-content:center;max-width:420px;margin:24px auto 0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg><span>A confirmation email is on its way</span></div>
+            <div class="cta-banner__actions" style="justify-content:center;margin-top:24px"><a class="btn btn--primary btn--lg" href="index.html">Back to home</a><a class="btn btn--secondary btn--lg" href="programs.html">Explore programs</a></div>
+          </div>
+        </section>
+      </div>
+
+      <p class="center text-muted mt-6" style="font-size:var(--fs-sm)">Prefer to talk? Call <a href="tel:+302810360544">+30 2810 360544</a> — we’re happy to help.</p>
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
+</body>
+</html>

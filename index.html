@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RSA — Robotic & Science Academy</title>
+  <meta name="description" content="Hands-on robotics, programming, AI and STEM education for children and teenagers aged 5–18. Book a free trial lesson at Robotic & Science Academy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="has-mobile-bar">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="RSA — Robotic & Science Academy home"><img class="brand__logo" src="assets/img/rsa-logo.png" alt="RSA — Robotic & Science Academy" width="87" height="44" /></a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li class="has-mega" aria-expanded="false">
+            <button class="nav__link has-mega" aria-haspopup="true">
+              Programs
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="mega mega--programs" role="menu" aria-label="Programs">
+              <div class="mega__cols">
+                <div class="mega__group">
+                  <h5>Robotics &amp; STEAM</h5>
+                  <a href="program.html" role="menuitem">Junior Robotics <span class="lvl">2 levels</span></a>
+                  <a href="program.html" role="menuitem">Kids Robotics <span class="lvl">4 levels</span></a>
+                  <a href="program.html" role="menuitem">Teens Robotics</a>
+                </div>
+                <div class="mega__group">
+                  <h5>Technology &amp; Programming</h5>
+                  <a href="program.html" role="menuitem">Robotics &amp; Python</a>
+                  <a href="program.html" role="menuitem">Arduino &amp; C++</a>
+                </div>
+                <div class="mega__group">
+                  <h5>Emerging Technologies</h5>
+                  <a href="program.html" role="menuitem">AI Academy <span class="lvl">Kids · Teens</span></a>
+                  <a href="program.html" role="menuitem">Drone Academy <span class="lvl">Kids · Teens</span></a>
+                </div>
+                <div class="mega__group mega__group--wide">
+                  <h5>Digital Skills</h5>
+                  <a href="program.html" role="menuitem">Digital Skills &amp; Certification</a>
+                </div>
+              </div>
+              <div class="mega__foot">
+                <span>Many programs. One clear path.</span>
+                <a class="btn btn--text" href="programs.html">See all programs <span class="arrow">→</span></a>
+              </div>
+            </div>
+          </li>
+          <li><a class="nav__link" href="academy.html">The Academy</a></li>
+          <li><a class="nav__link" href="schools.html">For Schools</a></li>
+          <li><a class="nav__link" href="#news">News</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="utility-link" href="#hub">RSA HUB</a>
+        <a class="utility-link" href="#payments">Payments</a>
+        <span class="utility-sep" aria-hidden="true"></span>
+        <a class="btn btn--primary btn--sm" href="free-trial.html">Free Trial</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE NAV ============ -->
+  <div class="mobile-nav" id="mobileNav" hidden>
+    <div class="mobile-nav__scrim"></div>
+    <div class="mobile-nav__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="mobile-nav__head">
+        <a class="brand" href="index.html" aria-label="RSA — Robotic & Science Academy home"><img class="brand__logo" src="assets/img/rsa-logo.png" alt="RSA — Robotic & Science Academy" width="87" height="44" /></a>
+        <button class="btn--icon mobile-nav__close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      </div>
+      <div class="mobile-nav__body">
+        <div class="m-nav-group" aria-expanded="false">
+          <button class="m-nav-link">Programs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="m-nav-sub">
+            <span class="m-nav-cat">Robotics &amp; STEAM</span>
+            <a href="program.html">Junior Robotics <em>2 levels</em></a>
+            <a class="sub-lvl" href="program.html">› Junior A</a>
+            <a class="sub-lvl" href="program.html">› Junior B</a>
+            <a href="program.html">Kids Robotics <em>4 levels</em></a>
+            <a class="sub-lvl" href="program.html">› 1st Kids Robotics</a>
+            <a class="sub-lvl" href="program.html">› 2nd Kids Robotics</a>
+            <a class="sub-lvl" href="program.html">› 3rd Kids Robotics</a>
+            <a class="sub-lvl" href="program.html">› 4th Kids Robotics</a>
+            <a href="program.html">Teens Robotics</a>
+            <span class="m-nav-cat">Technology &amp; Programming</span>
+            <a href="program.html">Robotics &amp; Python</a>
+            <a href="program.html">Arduino &amp; C++</a>
+            <span class="m-nav-cat">Emerging Technologies</span>
+            <a href="program.html">AI Academy <em>Kids · Teens</em></a>
+            <a class="sub-lvl" href="program.html">› AI Kids</a>
+            <a class="sub-lvl" href="program.html">› AI Teens</a>
+            <a href="program.html">Drone Academy <em>Kids · Teens</em></a>
+            <a class="sub-lvl" href="program.html">› Drone Kids</a>
+            <a class="sub-lvl" href="program.html">› Drone Teens</a>
+            <span class="m-nav-cat">Digital Skills</span>
+            <a href="program.html">Digital Skills &amp; Certification</a>
+            <a href="programs.html"><strong>See all programs →</strong></a>
+          </div>
+        </div>
+        <a class="m-nav-link" href="academy.html">The Academy <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 18 6-6-6-6"/></svg></a>
+        <a class="m-nav-link" href="schools.html">For Schools <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 18 6-6-6-6"/></svg></a>
+        <a class="m-nav-link" href="#news">News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 18 6-6-6-6"/></svg></a>
+        <a class="m-nav-link" href="contact.html">Contact <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 18 6-6-6-6"/></svg></a>
+      </div>
+      <div class="mobile-nav__foot">
+        <a class="btn btn--primary btn--block btn--lg" href="free-trial.html">Book a Free Trial</a>
+        <div class="mobile-nav__utils">
+          <a href="#hub">RSA HUB</a>
+          <a href="#payments">Payments</a>
+          <a href="contact.html">Call us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <span class="eyebrow">Robotics · AI · STEM</span>
+          <h1 class="hero__title">Where technology becomes an <span class="hl">experience</span>.</h1>
+          <p class="hero__sub">Hands-on robotics, programming, AI and STEM education for children and teenagers aged 5–18 — learning by building real things.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary btn--lg" href="free-trial.html">Book a Free Trial</a>
+            <a class="btn btn--secondary btn--lg" href="programs.html">Explore Programs</a>
+          </div>
+          <p class="hero__note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No commitment · Free first lesson · Small groups</p>
+        </div>
+        <div class="hero__visual">
+          <div class="media">
+            <img class="media__img" src="assets/img/hero-classroom.jpg" alt="Παιδιά φτιάχνουν και προγραμματίζουν ρομπότ σε μάθημα στο RSA" width="3024" height="4032" />
+            <span class="media__label"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z" fill="currentColor" stroke="none"/></svg> Η τάξη σε δράση</span>
+          </div>
+          <div class="hero__badge hero__badge--tl">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 15.6 7.5 18.2l1-5.5-4-3.9 5.5-.8z"/></svg>
+            <div><strong>230+</strong><span>Competition distinctions</span></div>
+          </div>
+          <div class="hero__badge hero__badge--br">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+            <div><strong>4,900+</strong><span>Students taught</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST / STATS ============ -->
+    <section class="section--tight" aria-label="RSA by the numbers">
+      <div class="container">
+        <div class="stats reveal">
+          <div class="stat"><div class="stat__num" data-count="10" data-suffix="+">10<span class="u">+</span></div><div class="stat__label">Years of experience</div></div>
+          <div class="stat"><div class="stat__num" data-count="4900" data-suffix="+">4,900<span class="u">+</span></div><div class="stat__label">Students taught</div></div>
+          <div class="stat"><div class="stat__num" data-count="230" data-suffix="+">230<span class="u">+</span></div><div class="stat__label">Competition distinctions</div></div>
+          <div class="stat"><div class="stat__num" data-count="6">6</div><div class="stat__label">Learning paths, ages 5–18</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROGRAM FINDER ============ -->
+    <section class="section section--soft" aria-labelledby="finder-h">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow eyebrow--accent" style="justify-content:center">Find the right program</span>
+          <h2 id="finder-h">Tell us your child’s age — we’ll do the rest</h2>
+          <p>No jargon, no program codes. Pick an age and see the recommended path in one tap.</p>
+        </div>
+        <div class="finder" id="programFinder">
+          <p class="finder__q" id="finder-q">How old is your child?</p>
+          <div class="finder__ages" role="group" aria-labelledby="finder-q">
+            <button class="age-btn" data-age="5-6" aria-pressed="false"><strong>5–6</strong><span>years</span></button>
+            <button class="age-btn" data-age="6-8" aria-pressed="false"><strong>6–8</strong><span>years</span></button>
+            <button class="age-btn" data-age="8-10" aria-pressed="false"><strong>8–10</strong><span>years</span></button>
+            <button class="age-btn" data-age="10-13" aria-pressed="false"><strong>10–13</strong><span>years</span></button>
+            <button class="age-btn" data-age="14-18" aria-pressed="false"><strong>14–18</strong><span>years</span></button>
+          </div>
+          <div class="finder__result" id="finderResult" tabindex="-1" aria-live="polite">
+            <div class="finder__empty">Select an age above to see the recommended program and book a free trial.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROGRAMS (grouped: Find your path) ============ -->
+    <section class="section" id="programs" aria-labelledby="programs-h">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Find your path</span>
+          <h2 id="programs-h">Many programs. One clear path.</h2>
+          <p>A core progression — Junior → Kids → Teens — plus specialized programs to go further.</p>
+        </div>
+
+        <!-- GROUP 1 · Robotics & STEAM (core path) -->
+        <div class="prog-group">
+          <div class="group-head"><span class="group-tag group-tag--steam">Core path</span><h3>Robotics &amp; STEAM</h3><p>Junior → Kids → Teens</p></div>
+          <div class="grid grid--3">
+            <article class="program-card reveal">
+              <div class="media" role="img" aria-label="Young child building with large robotics bricks"><div class="media__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 15.6 7.5 18.2l1-5.5-4-3.9 5.5-.8z"/></svg></div></div>
+              <div class="program-card__body">
+                <span class="program-card__cat">Robotics &amp; STEAM</span>
+                <h3 class="program-card__title">Junior Robotics</h3>
+                <p class="program-card__desc">5–6 years · Προνήπιο–Νήπιο</p>
+                <div class="program-card__levels"><span class="tag tag--age">Junior A</span><span class="tag tag--age">Junior B</span></div>
+                <div class="program-card__foot"><a class="btn btn--text" href="program.html">Explore Program <span class="arrow">→</span></a><span class="tag">2 levels</span></div>
+              </div>
+            </article>
+            <article class="program-card reveal">
+              <div class="media" role="img" aria-label="Children assembling a motorised robot"><div class="media__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4M9 4h6"/><circle cx="9" cy="14" r="1.3"/><circle cx="15" cy="14" r="1.3"/></svg></div></div>
+              <div class="program-card__body">
+                <span class="program-card__cat">Robotics &amp; STEAM</span>
+                <h3 class="program-card__title">Kids Robotics</h3>
+                <p class="program-card__desc">6–10 years · Α΄–Ε΄ Δημοτικού</p>
+                <div class="program-card__levels"><span class="tag tag--age">1st</span><span class="tag tag--age">2nd</span><span class="tag tag--age">3rd</span><span class="tag tag--age">4th</span></div>
+                <div class="program-card__foot"><a class="btn btn--text" href="program.html">Explore Levels <span class="arrow">→</span></a><span class="tag">4 levels</span></div>
+              </div>
+            </article>
+            <article class="program-card reveal">
+              <div class="media media--ink" role="img" aria-label="Teenager coding a robot for a competition"><div class="media__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg></div></div>
+              <div class="program-card__body">
+                <span class="program-card__cat">Robotics &amp; STEAM</span>
+                <h3 class="program-card__title">Teens Robotics</h3>
+                <p class="program-card__desc">10–18 years · Ε΄–ΣΤ΄ Δημοτικού · Γυμνάσιο · Λύκειο</p>
+                <div class="program-card__levels"><span class="tag tag--spec">Robotics &amp; STEAM for Teens</span></div>
+                <div class="program-card__foot"><a class="btn btn--text" href="program.html">Explore Program <span class="arrow">→</span></a><span class="tag">Ages 10–18</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- GROUP 2 · Technology & Programming -->
+        <div class="prog-group">
+          <div class="group-head"><span class="group-tag group-tag--tech">Specialized</span><h3>Technology &amp; Programming</h3><p>Advanced programming</p></div>
+          <div class="grid grid--3">
+            <article class="program-card reveal">
+              <div class="media media--accent" role="img" aria-label="Robot controlled with Python code"><div class="media__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6 3 12l5 6M16 6l5 6-5 6"/></svg></div></div>
+              <div class="program-card__body">
+                <span class="program-card__cat">Technology &amp; Programming</span>
+                <h3 class="program-card__title">Robotics &amp; Python</h3>
+                <p class="program-card__desc">Robotics combined with Python programming.</p>
+                <div class="program-card__levels"><span class="tag tag--spec">Specialized Program</span></div>
+                <div class="program-card__foot"><a class="btn btn--text" href="program.html">Explore Program <span class="arrow">→</span></a></div>
+              </div>
+            </article>
+            <article class="program-card reveal">
+              <div class="media media--ink" role="img" aria-label="Arduino board wired on a breadboard"><div class="media__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="10" rx="2"/><path d="M7 7V4M12 7V4M17 7V4M7 17v3M12 17v3M17 17v3"/></svg></div></div>
+              <div class="program-card__body">
+                <span class="program-card__cat">Technology &amp; Programming</span>
+                <h3 class="program-card__title">Arduino &amp; C++</h3>
+                <p class="program-card__desc">Physical computing with Arduino and C++.</p>
+                <div class="program-card__levels"><span class="tag tag--spec">Specialized Program</span></div>
+                <div class="program-card__foot"><a class="btn btn--text" href="program.html">Explore Program <span class="arrow">→</span></a></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- GROUP 3 · Emerging Technologies -->
+        <div class="prog-group">
+          <div class="group-head"><span class="group-tag group-tag--emerg">Specialized</span><h3>Emerging Technologies</h3><p>New for 2026–2027</p></div>
+          <div class="grid grid--3">
+            <article class="program-card reveal">
+              <div class="media media--accent" role="img" aria-label="Student training an AI model on a laptop"><div class="media__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div></div>
+              <div class="program-card__body">
+                <span class="program-card__cat">Emerging Technologies</span>
+                <h3 class="program-card__title">AI Academy</h3>
+                <p class="program-card__desc">Artificial Intelligence &amp; Machine Learning</p>
+                <div class="program-card__levels"><span class="tag tag--age">AI Kids</span><span class="tag tag--age">AI Teens</span></div>
+                <div class="program-card__foot"><a class="btn btn--text" href="program.html">Explore Program <span class="arrow">→</span></a><span class="tag">2 tracks</span></div>
+              </div>
+            </article>
+            <article class="program-card reveal">
+              <div class="media" role="img" aria-label="Students flying a small drone indoors"><div class="media__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M7 7L3 3M17 7l4-4M7 17l-4 4M17 17l4 4"/><circle cx="4" cy="4" r="2"/><circle cx="20" cy="4" r="2"/><circle cx="4" cy="20" r="2"/><circle cx="20" cy="20" r="2"/></svg></div></div>
+              <div class="program-card__body">
+                <span class="program-card__cat">Emerging Technologies</span>
+                <h3 class="program-card__title">Drone Academy</h3>
+                <p class="program-card__desc">Drone Technology — χειρισμός &amp; προγραμματισμός</p>
+                <div class="program-card__levels"><span class="tag tag--age">Drone Kids</span><span class="tag tag--age">Drone Teens</span></div>
+                <div class="program-card__foot"><a class="btn btn--text" href="program.html">Explore Program <span class="arrow">→</span></a><span class="tag">2 tracks</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- GROUP 4 · Digital Skills -->
+        <div class="prog-group">
+          <div class="group-head"><span class="group-tag group-tag--digital">Separate</span><h3>Digital Skills</h3><p>Πληροφορική &amp; πιστοποίηση</p></div>
+          <div class="grid grid--3">
+            <article class="program-card reveal">
+              <div class="media media--ink" role="img" aria-label="Student working on a computer certification exercise"><div class="media__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M12 18v2"/></svg></div></div>
+              <div class="program-card__body">
+                <span class="program-card__cat">Digital Skills</span>
+                <h3 class="program-card__title">Digital Skills &amp; Certification</h3>
+                <p class="program-card__desc">Μαθήματα Πληροφορικής και Πιστοποίηση Υπολογιστών</p>
+                <div class="program-card__levels"><span class="tag tag--spec">New for 2026–2027</span></div>
+                <div class="program-card__foot"><a class="btn btn--text" href="program.html">Explore Program <span class="arrow">→</span></a></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="center mt-6"><a class="btn btn--secondary" href="programs.html">See all programs</a></div>
+      </div>
+    </section>
+
+    <!-- ============ WHY RSA ============ -->
+    <section class="section section--surface" aria-labelledby="why-h">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why RSA</span>
+          <h2 id="why-h">A method built on doing, not memorising</h2>
+        </div>
+        <div class="grid grid--4">
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l-8 8 4 4 8-8zM6 12l-3 7 7-3"/></svg></div>
+            <h3>Learn by doing</h3>
+            <p>Every lesson is hands-on. Ideas become real, working machines.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5-9 5-9-5zM3 12l9 5 9-5M3 17l9 5 9-5"/></svg></div>
+            <h3>Build &amp; create</h3>
+            <p>Students construct, experiment and iterate on their own designs.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 1 1 4.5 2.6c-.9.5-1.6 1-1.6 2.4M12 17h.01"/></svg></div>
+            <h3>Think &amp; solve</h3>
+            <p>Real challenges grow problem-solving and critical thinking.</p>
+          </div>
+          <div class="feature-card feature-card--accent reveal">
+            <div class="feature-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></div>
+            <h3>Tech for the future</h3>
+            <p>Programming, AI and robotics — the skills that matter next.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LEARNING PROCESS ============ -->
+    <section class="section" aria-labelledby="process-h">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow" style="justify-content:center">The RSA method</span>
+          <h2 id="process-h">How every project comes to life</h2>
+        </div>
+        <ol class="process reveal">
+          <li class="process__step"><span class="process__dot">1</span><h4>Discover</h4><p>Meet a real-world challenge.</p></li>
+          <li class="process__step"><span class="process__dot">2</span><h4>Build</h4><p>Construct the machine.</p></li>
+          <li class="process__step"><span class="process__dot">3</span><h4>Program</h4><p>Bring it to life with code.</p></li>
+          <li class="process__step"><span class="process__dot">4</span><h4>Test</h4><p>Try, measure, learn.</p></li>
+          <li class="process__step"><span class="process__dot">5</span><h4>Improve</h4><p>Iterate and perfect.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SCHOOLS ============ -->
+    <section class="section section--dark" aria-labelledby="schools-h">
+      <div class="container split split--wide-left">
+        <div>
+          <span class="eyebrow eyebrow--accent">For Schools</span>
+          <h2 id="schools-h">Bring STEM learning into the classroom</h2>
+          <p class="mt-4">We partner with schools and educators to deliver robotics, coding and AI as school visits, workshops and long-term collaborations — fully aligned to your curriculum and equipment.</p>
+          <ul class="stack mt-6" style="--sp-4:12px">
+            <li class="flex items-center gap-3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F9A65A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Interactive school visits &amp; demos</li>
+            <li class="flex items-center gap-3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F9A65A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Teacher-supported robotics workshops</li>
+            <li class="flex items-center gap-3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F9A65A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Ongoing educational collaborations</li>
+          </ul>
+          <div class="hero__cta">
+            <a class="btn btn--on-dark btn--lg" href="schools.html">Explore School Programs</a>
+            <a class="btn btn--ghost-invert btn--lg" href="contact.html">Contact Us</a>
+          </div>
+        </div>
+        <div class="media media--wide" role="img" aria-label="A robotics workshop taking place in a school classroom">
+          <div class="media__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section" aria-labelledby="testi-h">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Parents &amp; students</span>
+          <h2 id="testi-h">Trusted by thousands of families</h2>
+        </div>
+        <div class="carousel" data-carousel>
+          <div class="carousel__viewport">
+            <div class="carousel__track">
+              <figure class="testimonial-card">
+                <div class="rating" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg>
+                </div>
+                <blockquote>“My son counts down the days to his robotics class. He’s learning to code without even realising it.”</blockquote>
+                <figcaption class="testimonial-card__author"><span class="avatar" aria-hidden="true">MK</span><span><strong>Maria K.</strong><span>Parent · Kids Robotics, age 9</span></span></figcaption>
+              </figure>
+              <figure class="testimonial-card">
+                <div class="rating" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg>
+                </div>
+                <blockquote>“The teachers are patient and genuinely knowledgeable. Our daughter went from shy to leading her competition team.”</blockquote>
+                <figcaption class="testimonial-card__author"><span class="avatar" aria-hidden="true">DP</span><span><strong>Dimitris P.</strong><span>Parent · Teens Robotics, age 12</span></span></figcaption>
+              </figure>
+              <figure class="testimonial-card">
+                <div class="rating" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg>
+                </div>
+                <blockquote>“The AI Academy gave me a real project portfolio. It’s the reason I chose to study computer engineering.”</blockquote>
+                <figcaption class="testimonial-card__author"><span class="avatar" aria-hidden="true">EA</span><span><strong>Eleni A.</strong><span>Student · AI Academy, age 17</span></span></figcaption>
+              </figure>
+              <figure class="testimonial-card">
+                <div class="rating" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg>
+                </div>
+                <blockquote>“Booking the free trial was effortless and we knew within one lesson it was the right place.”</blockquote>
+                <figcaption class="testimonial-card__author"><span class="avatar" aria-hidden="true">SV</span><span><strong>Sofia V.</strong><span>Parent · Junior Robotics, age 6</span></span></figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="carousel__controls">
+            <div class="carousel__dots" role="tablist" aria-label="Testimonial navigation"></div>
+            <div class="carousel__nav">
+              <button class="btn--icon" data-prev aria-label="Previous testimonials"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+              <button class="btn--icon" data-next aria-label="Next testimonials"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS ============ -->
+    <section class="section section--surface" id="news" aria-labelledby="ach-h">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow" style="justify-content:center">Achievements</span>
+          <h2 id="ach-h">A decade of distinctions</h2>
+          <p>Our students compete — and win — at national and international level.</p>
+        </div>
+        <div class="grid grid--3">
+          <div class="achievement-card reveal">
+            <span class="achievement-card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 4H4v2a3 3 0 0 0 3 3M17 4h3v2a3 3 0 0 1-3 3"/></svg></span>
+            <div><h4>WRO National Finalists</h4><p>Multiple podium finishes at the World Robot Olympiad.</p><time>2016 – 2025</time></div>
+          </div>
+          <div class="achievement-card reveal">
+            <span class="achievement-card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 4H4v2a3 3 0 0 0 3 3M17 4h3v2a3 3 0 0 1-3 3"/></svg></span>
+            <div><h4>FIRST® LEGO League</h4><p>Innovation &amp; teamwork awards across age divisions.</p><time>Ongoing</time></div>
+          </div>
+          <div class="achievement-card reveal">
+            <span class="achievement-card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 4H4v2a3 3 0 0 0 3 3M17 4h3v2a3 3 0 0 1-3 3"/></svg></span>
+            <div><h4>230+ distinctions</h4><p>Cumulative competition awards earned by RSA students.</p><time>Since 2015</time></div>
+          </div>
+          <div class="achievement-card reveal" data-extra-achievement hidden>
+            <span class="achievement-card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/></svg></span>
+            <div><h4>RoboCup Junior</h4><p>Qualified teams in rescue and soccer leagues.</p><time>2019 – 2024</time></div>
+          </div>
+          <div class="achievement-card reveal" data-extra-achievement hidden>
+            <span class="achievement-card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/></svg></span>
+            <div><h4>Panhellenic Robotics</h4><p>Repeated regional and national championship placements.</p><time>2017 – 2025</time></div>
+          </div>
+          <div class="achievement-card reveal" data-extra-achievement hidden>
+            <span class="achievement-card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/></svg></span>
+            <div><h4>STEM Discovery awards</h4><p>Recognised for teaching innovation and outreach.</p><time>2021 – 2024</time></div>
+          </div>
+        </div>
+        <div class="reveal-more"><button class="btn btn--secondary" data-reveal-achievements>See all achievements</button></div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <span class="eyebrow eyebrow--accent" style="justify-content:center;color:#F9A65A">Ready to start?</span>
+          <h2>Give your child a first taste of the future</h2>
+          <p>Book a free trial lesson and let your child experience robotics and technology firsthand — no commitment, no cost.</p>
+          <div class="cta-banner__actions">
+            <a class="btn btn--on-dark btn--lg" href="free-trial.html">Book Free Trial</a>
+            <a class="btn btn--ghost-invert btn--lg" href="programs.html">Explore Programs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="RSA — Robotic & Science Academy home"><img class="brand__logo" src="assets/img/rsa-logo.png" alt="RSA — Robotic & Science Academy" width="87" height="44" /></a>
+          <p>Robotic &amp; Science Academy — where children and teenagers learn technology by building real things.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="RSA on Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2 0-3 1-3 3v2H8v3h3v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z"/></svg></a>
+            <a href="#" aria-label="RSA on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="RSA on YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.4 5 12 5 12 5s-4.4 0-7.2.1c-.4 0-1.2 0-2 .9C2.2 6.6 2 8 2 8s-.2 1.6-.2 3.3v1.5C1.8 14.5 2 16 2 16s.2 1.4.8 2c.8.8 1.8.8 2.3.9C6.6 19 12 19 12 19s4.4 0 7.2-.1c.4 0 1.2 0 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1.5C22.2 9.6 22 8 22 8zM10 15V9l5 3z"/></svg></a>
+          </div>
+        </div>
+        <nav class="footer-col" aria-label="Programs">
+          <h4>Programs</h4>
+          <a href="program.html">Junior Robotics</a><a href="program.html">Kids Robotics</a><a href="program.html">Teens Robotics</a><a href="program.html">Robotics &amp; Python</a><a href="program.html">Arduino &amp; C++</a><a href="program.html">AI Academy</a><a href="program.html">Drone Academy</a><a href="program.html">Digital Skills &amp; Certification</a>
+        </nav>
+        <nav class="footer-col" aria-label="Academy">
+          <h4>Academy</h4>
+          <a href="academy.html">About</a><a href="academy.html">Team</a><a href="academy.html">Facilities</a><a href="index.html#news">Achievements</a><a href="contact.html">FAQ</a>
+        </nav>
+        <nav class="footer-col" aria-label="Schools">
+          <h4>Schools</h4>
+          <a href="schools.html">School Visits</a><a href="schools.html">Workshops</a><a href="schools.html">Collaborations</a>
+        </nav>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Ηράκλειο Κρήτης</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg> +30 2810 360544</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg> rsa.edu.gr@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Robotic &amp; Science Academy. All rights reserved.</p>
+        <nav class="footer-legal" aria-label="Legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ MOBILE STICKY CTA ============ -->
+  <div class="mobile-cta-bar">
+    <a class="btn btn--secondary" href="tel:+302810360544" aria-label="Call RSA"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></a>
+    <a class="btn btn--primary" href="free-trial.html">Book a Free Trial</a>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
+</body>
+</html>
