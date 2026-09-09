@@ -872,6 +872,7 @@ a.icon-chip:hover { border-color: var(--c-primary); background: var(--c-primary-
 
 @media (max-width: 900px) {
   .primary-nav, .header-actions .utility-link, .header-actions .utility-sep { display: none; }
+  .header-actions { margin-left: auto; }   /* push CTA + hamburger to the right */
   .nav-toggle { display: inline-flex; }
   .hero__inner { grid-template-columns: 1fr; gap: var(--sp-6); }
   .hero__visual { order: -1; }
