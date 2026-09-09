@@ -2,6 +2,12 @@
    RSA — interaction layer
    Progressive enhancement: everything degrades gracefully without JS.
    ===================================================================== */
+
+/* Icon set used by JS-rendered markup (defined before the IIFE runs) */
+var ICONS = {
+  robot: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4M9 4h6"/><circle cx="9" cy="14" r="1.3"/><circle cx="15" cy="14" r="1.3"/><path d="M2 13v3M22 13v3"/></svg>',
+};
+
 (function () {
   "use strict";
   const $  = (s, c = document) => c.querySelector(s);
@@ -132,6 +138,9 @@
       }
     };
     ageBtns.forEach((btn) => btn.addEventListener("click", () => select(btn, true)));
+    // Default pre-selected recommendation (5–6 → Junior Robotics); no scroll/focus on load.
+    const defaultBtn = ageBtns.find((b) => b.dataset.age === "5-6") || ageBtns[0];
+    if (defaultBtn) select(defaultBtn, false);
   }
 
   /* ---------- Testimonials carousel ---------- */
@@ -303,11 +312,4 @@
     // reduced-motion: leave the static value already in the markup
   }
 
-  /* ---------- Icons used by JS-rendered markup ---------- */
-  window.ICONS = window.ICONS || {};
 })();
-
-/* Icon set injected before main IIFE runs via inline reference below */
-var ICONS = {
-  robot: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4M9 4h6"/><circle cx="9" cy="14" r="1.3"/><circle cx="15" cy="14" r="1.3"/><path d="M2 13v3M22 13v3"/></svg>',
-};
