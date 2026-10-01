@@ -14,16 +14,23 @@ var ICONS = {
   const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- Header shadow on scroll ---------- */
+  /* ---------- Header shadow + reading progress on scroll ---------- */
   const header = $(".site-header");
   if (header) {
-    const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
+    let ticking = false;
+    const onScroll = () => {
+      ticking = false;
+      const y = window.scrollY;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      header.classList.toggle("is-scrolled", y > 8);
+      header.style.setProperty("--progress", max > 0 ? Math.min(1, y / max).toFixed(4) : 0);
+    };
     onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
   }
 
   /* ---------- Desktop mega menu (click + hover + keyboard) ---------- */
-  $$(".has-mega").forEach((item) => {
+  $$("li.has-mega").forEach((item) => {
     const btn = $(".has-mega > .nav__link", item) || item.firstElementChild;
     if (!btn) return;
     const close = () => item.setAttribute("aria-expanded", "false");
@@ -65,6 +72,11 @@ var ICONS = {
   mobileNav && $(".mobile-nav__scrim", mobileNav).addEventListener("click", closeNav);
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && mobileNav && mobileNav.classList.contains("is-open")) closeNav();
+  });
+  // mirror the current page onto the drawer links
+  const here = location.pathname.split("/").pop() || "index.html";
+  $$(".mobile-nav a.m-nav-link").forEach((a) => {
+    if (a.getAttribute("href") === here) a.setAttribute("aria-current", "page");
   });
   // collapsible groups inside mobile nav
   $$(".m-nav-group").forEach((group) => {
@@ -143,6 +155,75 @@ var ICONS = {
     if (defaultBtn) select(defaultBtn, false);
   }
 
+  /* ---------- Hero slideshow (card deck: front card flies out and goes to the back) ---------- */
+  $$("[data-hero-slider]").forEach((root) => {
+    const slides = $$(".hero-slide", root);
+    if (slides.length < 2) return;
+    const DELAY = 5500;                            // time each photo stays in front
+    const OUT = prefersReduced ? 0 : 450;          // matches .is-leaving transition
+    let order = slides.map((_, i) => i);           // order[0] is the front card
+    let busy = false, timer = null, hovering = false;
+    const paint = () => {
+      order.forEach((idx, depth) => {
+        const s = slides[idx];
+        s.style.setProperty("--d", depth);
+        s.style.zIndex = String(slides.length - depth);
+        s.classList.toggle("is-active", depth === 0);
+        s.setAttribute("aria-hidden", String(depth !== 0));
+      });
+    };
+    // forward: flick the front card out, then tuck it in at the back
+    const forward = () => {
+      const idx = order[0];
+      slides[idx].classList.add("is-leaving");
+      setTimeout(() => {
+        order = order.slice(1).concat(idx);
+        slides[idx].style.zIndex = "0";            // drop behind before it glides back
+        slides[idx].classList.remove("is-leaving");
+        paint();
+        busy = false;
+      }, OUT);
+    };
+    // backward: pull the last card out from the back and lay it on top
+    const backward = () => {
+      const idx = order[order.length - 1];
+      const s = slides[idx];
+      s.classList.add("no-anim", "is-leaving");
+      s.style.zIndex = String(slides.length + 1);
+      void s.offsetWidth;
+      s.classList.remove("no-anim", "is-leaving");
+      order = [idx].concat(order.slice(0, -1));
+      paint();
+      setTimeout(() => { busy = false; }, OUT);
+    };
+    const step = (dir) => {
+      if (busy) return;
+      busy = true;
+      dir < 0 ? backward() : forward();
+      schedule();
+    };
+    // autoplay (off under reduced motion, paused on hover and in background tabs)
+    const schedule = () => {
+      clearTimeout(timer);
+      if (prefersReduced || hovering || document.hidden) return;
+      timer = setTimeout(() => step(1), DELAY);
+    };
+    const visual = root.closest(".hero__visual") || root;
+    visual.addEventListener("mouseenter", () => { hovering = true; clearTimeout(timer); });
+    visual.addEventListener("mouseleave", () => { hovering = false; schedule(); });
+    document.addEventListener("visibilitychange", schedule);
+    // swipe on touch screens
+    let sx = null;
+    root.addEventListener("pointerdown", (e) => { sx = e.clientX; });
+    root.addEventListener("pointerup", (e) => {
+      if (sx === null) return;
+      const dx = e.clientX - sx; sx = null;
+      if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1);
+    });
+    paint();
+    schedule();
+  });
+
   /* ---------- Testimonials carousel ---------- */
   $$("[data-carousel]").forEach((root) => {
     const track = $(".carousel__track", root);
@@ -179,6 +260,19 @@ var ICONS = {
     const go = (i) => { index = Math.max(0, Math.min(i, maxIndex())); update(); };
     prev && prev.addEventListener("click", () => go(index - 1));
     next && next.addEventListener("click", () => go(index + 1));
+    // swipe (touch / pen / mouse drag)
+    let startX = null;
+    track.addEventListener("pointerdown", (e) => { startX = e.clientX; });
+    window.addEventListener("pointerup", (e) => {
+      if (startX === null) return;
+      const dx = e.clientX - startX; startX = null;
+      if (Math.abs(dx) > 40) go(index + (dx < 0 ? 1 : -1));
+    });
+    // arrow keys when focus is inside the carousel
+    root.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") { go(index + 1); }
+      if (e.key === "ArrowLeft")  { go(index - 1); }
+    });
     window.addEventListener("resize", () => { computePerView(); if (index > maxIndex()) index = maxIndex(); buildDots(); update(); });
     computePerView(); buildDots(); update();
   });
@@ -275,12 +369,25 @@ var ICONS = {
   const revealBtn = $("[data-reveal-achievements]");
   if (revealBtn) {
     revealBtn.addEventListener("click", () => {
-      $$("[data-extra-achievement]").forEach((el) => (el.hidden = false));
+      $$("[data-extra-achievement]").forEach((el, i) => {
+        el.hidden = false;
+        el.classList.add("is-in", "is-new");
+        el.style.animationDelay = i * 80 + "ms";
+      });
       revealBtn.parentElement.hidden = true;
     });
   }
 
-  /* ---------- Scroll reveal ---------- */
+  /* ---------- Scroll reveal (siblings cascade in) ---------- */
+  $$(".reveal").forEach((el) => {
+    const sibs = Array.from(el.parentElement.children).filter((c) => c.classList.contains("reveal"));
+    const i = sibs.indexOf(el);
+    if (i > 0) {
+      el.style.transitionDelay = Math.min(i, 5) * 70 + "ms";
+      // drop the delay once revealed so hover transitions stay snappy
+      el.addEventListener("transitionend", () => { el.style.transitionDelay = ""; }, { once: true });
+    }
+  });
   if (!prefersReduced && "IntersectionObserver" in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
@@ -321,6 +428,32 @@ var ICONS = {
       counters.forEach((el) => cio.observe(el));
     }
     // reduced-motion: leave the static value already in the markup
+  }
+
+  /* ---------- Back to top ---------- */
+  const toTop = document.createElement("button");
+  toTop.className = "to-top";
+  toTop.type = "button";
+  toTop.setAttribute("aria-label", "Back to top");
+  toTop.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+  document.body.appendChild(toTop);
+  toTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: prefersReduced ? "auto" : "smooth" });
+  });
+  const toggleTop = () => toTop.classList.toggle("is-visible", window.scrollY > window.innerHeight * 0.9);
+  toggleTop();
+  window.addEventListener("scroll", toggleTop, { passive: true });
+
+  /* ---------- Mobile CTA bar: step aside while page CTAs / footer are on screen ---------- */
+  const ctaBar = $(".mobile-cta-bar");
+  if (ctaBar && "IntersectionObserver" in window) {
+    const watched = $$(".hero__cta, .cta-banner, .site-footer");
+    const visible = new Set();
+    const bio = new IntersectionObserver((entries) => {
+      entries.forEach((e) => (e.isIntersecting ? visible.add(e.target) : visible.delete(e.target)));
+      ctaBar.classList.toggle("is-hidden", visible.size > 0);
+    });
+    watched.forEach((el) => bio.observe(el));
   }
 
 })();

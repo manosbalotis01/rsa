@@ -34,6 +34,7 @@
     "Call us": "Καλέστε μας",
     "Call": "Κλήση",
     "Call RSA": "Καλέστε το RSA",
+    "Back to top": "Επιστροφή στην αρχή",
 
     // --- CTAs (shared) ---
     "Book a Free Trial": "Κλείσε Δωρεάν Μάθημα",

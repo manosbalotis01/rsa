@@ -141,9 +141,28 @@
           <p class="hero__note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No commitment · Free first lesson · Small groups</p>
         </div>
         <div class="hero__visual">
-          <div class="media">
-            <img class="media__img" src="assets/img/hero-classroom.jpg" alt="Παιδιά φτιάχνουν και προγραμματίζουν ρομπότ σε μάθημα στο RSA" width="3024" height="4032" />
-            <span class="media__label"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z" fill="currentColor" stroke="none"/></svg> Η τάξη σε δράση</span>
+          <!-- Hero slideshow · replace assets/img/hero-2…5.jpg with real photos (keep 3:4 portrait) -->
+          <div class="media hero-slider" data-hero-slider role="region" aria-roledescription="carousel" aria-label="Στιγμές από το RSA">
+            <figure class="hero-slide is-active">
+              <img class="media__img" draggable="false" src="assets/img/hero-classroom.jpg" alt="Παιδιά φτιάχνουν και προγραμματίζουν ρομπότ σε μάθημα στο RSA" width="3024" height="4032" />
+              <figcaption class="media__label"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z" fill="currentColor" stroke="none"/></svg> Η τάξη σε δράση</figcaption>
+            </figure>
+            <figure class="hero-slide">
+              <img class="media__img" draggable="false" src="assets/img/hero-2.jpg" alt="Μαθητές συναρμολογούν ρομπότ με αισθητήρες και μοτέρ" width="1200" height="1600" loading="lazy" />
+              <figcaption class="media__label"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/></svg> Κατασκευή ρομπότ με αισθητήρες</figcaption>
+            </figure>
+            <figure class="hero-slide">
+              <img class="media__img" draggable="false" src="assets/img/hero-3.jpg" alt="Έφηβος γράφει κώδικα Python για να κινήσει ένα ρομπότ" width="1200" height="1600" loading="lazy" />
+              <figcaption class="media__label"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6 3 12l5 6M16 6l5 6-5 6"/></svg> Προγραμματισμός σε Python</figcaption>
+            </figure>
+            <figure class="hero-slide">
+              <img class="media__img" draggable="false" src="assets/img/hero-4.jpg" alt="Ομάδα μαθητών του RSA σε διαγωνισμό ρομποτικής" width="1200" height="1600" loading="lazy" />
+              <figcaption class="media__label"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/></svg> Η ομάδα μας στους διαγωνισμούς</figcaption>
+            </figure>
+            <figure class="hero-slide">
+              <img class="media__img" draggable="false" src="assets/img/hero-5.jpg" alt="Παιδιά πιλοτάρουν drone σε μάθημα του Drone Academy" width="1200" height="1600" loading="lazy" />
+              <figcaption class="media__label"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M7 7 3 3M17 7l4-4M7 17l-4 4M17 17l4 4"/></svg> Πτήσεις drone στην τάξη</figcaption>
+            </figure>
           </div>
           <div class="hero__badge hero__badge--tl">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 15.6 7.5 18.2l1-5.5-4-3.9 5.5-.8z"/></svg>
